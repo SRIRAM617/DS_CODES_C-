@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int fact(int n)
+{
+    if(n==0)
+    {
+        return 1;
+    }
+    else
+    {
+        return fact(n-1)*n;
+    }
+}
+int nCr(int n,int r)
+{
+    /*if(r==0||n==r)
+    {
+        return 1; Pascals method is commented.
+    }
+    else{
+        return (nCr(n-1,r))+(nCr(n-1,r-1));
+    }*/
+
+    int num,den;
+    num=fact(n);
+    den=(fact(n-r))*(fact(r));
+    return num/den;
+}
+int main()
+{
+    int a=nCr(5,2);
+    cout<<a<<endl;
+    return 0;
+
+}
