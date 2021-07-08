@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Array
+{
+    int *A;
+    int size;
+    int length;
+};
+void display(struct Array arr)
+{
+    int i;
+     printf("\nElements are\n");
+    for(i=0;i<arr.length;i++)
+    {
+
+        printf("%d ",arr.A[i]);
+    }
+}
+void add(int element,struct Array arr)
+{
+    if(arr.length<arr.size)
+    {
+        arr.A[arr.length-1]=element;
+        printf("\nElement added successfully");
+        arr.length++;
+    }
+}
+
+
+int main()
+{
+    int n,i;
+    struct Array arr;
+    printf("Enter the size of the array\n");
+    scanf("%d",&arr.size);
+    arr.A=(int *)malloc(arr.size*sizeof(int));
+
+    printf("\nEnter the number of elements in the array\n");
+    scanf("%d",&arr.length);
+    printf("\nEnter the elements\n");
+    for(i=0;i<arr.length-1;i++)
+    {
+        scanf("%d",&arr.A[i]);
+    }
+
+    add(6,arr);
+    display(arr);
+}
