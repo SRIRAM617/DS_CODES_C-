@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Array
+{
+    int *A;
+    int size;
+    int length;
+};
+/*int delete_array(int index,struct Array *arr)
+{
+    int i,x=0;
+    x=arr->A[index];
+    for(i=index;i<arr->length-1;i++)
+    {
+        arr->A[i]=arr->A[i+1];
+    }
+    arr->length--;
+    return x;
+}*/
+void swap(int *x,int *y)
+{
+    int t;
+    t=*x;
+    *x=*y;
+    *y=t;
+
+
+
+
+}
+void display(struct Array arr)
+{
+    int i;
+     printf("\nElements are\n");
+    for(i=0;i<arr.length;i++)
+    {
+
+        printf("%d ",arr.A[i]);
+    }
+}
+/*void add(int element,struct Array arr)
+{
+    if(arr.length<arr.size)
+    {
+        arr.A[arr.length-1]=element;
+        printf("\nElement added successfully");
+        arr.length++;
+    }
+}*/
+/*void insert(int index,struct Array *arr,int element)
+{
+  int i;
+  for(i=arr->length;i>=index;i--)
+  {
+      arr->A[i]=arr->A[i
+      -1];
+  }
+  arr->A[index]=element;
+  arr->length++;
+}*/
+
+
+int linearSearch(int key,struct Array *arr)
+{
+  int i,a;
+  for(i=0;i<arr->length;i++)
+  {
+      if(key==arr->A[i])
+      {
+          swap(&arr->A[i], &arr->A[0]);
+          return 0;
+
+
+
+      }
+
+  }
+
+        return -1;
+}
+
+
+
+
+int main()
+{
+    int n,i,result;
+    struct Array arr;
+    printf("Enter the size of the array\n");
+    scanf("%d",&arr.size);
+    arr.A=(int *)malloc(arr.size*sizeof(int));
+
+    printf("\nEnter the number of elements in the array\n");
+    scanf("%d",&arr.length);
+    printf("\nEnter the elements\n");
+    for(i=0;i<arr.length;i++)
+    {
+        scanf("%d",&arr.A[i]);
+    }
+
+    result=linearSearch(100,&arr);
+    printf("The location for transposition linear search %d ",result);
+
+
+    //display(arr);
+}
