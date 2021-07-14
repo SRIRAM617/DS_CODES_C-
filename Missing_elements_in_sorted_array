@@ -1,0 +1,34 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int sizeA,length,result,first;
+    int sum=0;
+    cout<<"Enter size of the array"<<endl;
+    cin>>sizeA;
+    int A[sizeA];
+    cout<<"Enter the length of the array"<<endl;
+    cin>>length;
+    cout<<"Enter the elements"<<endl;
+    for(int i=0;i<length;i++)
+    {
+        cin>>A[i];
+    }
+    first=A[0]-0;
+    for(int i=1;i<length;i++)
+    {
+
+        if(A[i]-i!=first)
+        {
+          //i--;
+         result=i+first;
+         break;
+        }
+
+
+        //sum+=A[i];
+    }
+
+    cout<<endl<<"The missing element is "<<result;
+
+}
