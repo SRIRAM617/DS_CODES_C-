@@ -1,0 +1,71 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int sizeA,length,mini,maxi,sizeH,H[
+    sizeH];
+    cout<<"Enter size of the array"<<endl;
+    cin>>sizeA;
+     int  A[sizeA];
+    cout<<"Enter the length of the array"<<endl;
+    cin>>length;
+    cout<<"Enter the elements"<<endl;
+    for(int k=0;k<length;k++)
+    {
+        cin>>A[k];
+    }
+    maxi=A[0],mini=A[0];
+    for(int i=0;i<length;i++)
+    {
+        if(maxi<A[i])
+        {
+            maxi=A[i];
+        }
+
+
+    }
+    for(int i=0;i<length;i++)
+    {
+        if(mini>A[i])
+        {
+            mini=A[i];
+        }
+
+
+    }
+    cout<<maxi<<endl;
+
+    cout<<mini<<endl;
+    sizeH=(maxi-mini)+1;
+
+    for(int i=mini;i<=maxi;i++)
+    {
+        H[i]=0;
+    }
+    for(int i=0;i<length;i++)
+    {
+        H[A[i]]++;
+    }
+    for(int i=mini;i<=maxi;i++)
+    {
+
+
+        if(H[i]>1);
+        {
+            cout<<"The element is "<<i<<"And it is repeated "<<H[i]<<" times"<<endl;
+        }
+
+    }
+
+
+
+
+   }
+
+
+
+
+
+
