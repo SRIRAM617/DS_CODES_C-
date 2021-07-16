@@ -1,0 +1,48 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int sizeA,length,sum;
+    int  H[]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+    cout<<"Enter size of the array"<<endl;
+    cin>>sizeA;
+     int  A[sizeA];
+    cout<<"Enter the length of the array"<<endl;
+    cin>>length;
+    cout<<"Enter the sum"<<endl;
+    cin>>sum;
+    cout<<"Enter the elements"<<endl;
+    for(int k=0;k<length;k++)
+    {
+        cin>>A[k];
+    }
+
+
+
+
+
+
+
+
+    for(int loop=0;loop<length;loop++)
+    {
+
+
+
+        if(H[sum-A[loop]]!=0&&sum-A[loop]>=0)
+        {
+         cout<<"The element is "<<sum-A[loop]<<"and "<<A[loop]<<endl;
+        }
+
+        H[A[loop]]++;
+
+    }
+    }
+
+
+
+
+
+
